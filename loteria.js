@@ -165,7 +165,10 @@ function elegirTabla(tabla) {
             }
         })
     tablero1.parentElement.classList.add("mx-auto")
-    preInicio()
+    document.getElementById('seleccion').style.display = 'none'
+    document.querySelector(".tablas").style.width = "30rem";
+    document.getElementById("mazocartas").style.display = "block";
+    document.getElementById("tablaSeleccionada").style.display = "block";
     if(modojuego =="CPU"){
         crearTableroCPU();
         document.getElementById("tablaCPU").style.display = "block";
@@ -177,14 +180,6 @@ function elegirTabla(tabla) {
             modo1Player()
         }
     }
-}
-
-
-function preInicio() {
-    document.getElementById('seleccion').style.display = 'none'
-    document.querySelector(".tablas").style.width = "30rem";
-    document.getElementById("mazocartas").style.display = "block";
-    document.getElementById("tablaSeleccionada").style.display = "block";
 }
 
 function modo1Player() {
@@ -233,7 +228,6 @@ function modoCPU() {
             casillaPlayer1.removeAttribute('disabled');
         }
         if (casillaCPU != null) {
-            casillaCPU.removeAttribute('disabled');
             seleccionar(casillaCPU)
         }
     } else {
