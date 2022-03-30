@@ -155,8 +155,7 @@ function elegirTabla(tabla) {
     tableros.remove()
     tablero1.addEventListener('click', (e) => {
             if(e.target.className == "cuadrito"){
-                if(e.target.hasAttribute('disabled')){
-                }else{
+                if(!e.target.hasAttribute('disabled')){
                     e.target.insertAdjacentHTML('beforeend', `<span class='ficha'><img src='/img/ficha.png'></span>`)
                     jugador1 += 1;
                     verificar()
