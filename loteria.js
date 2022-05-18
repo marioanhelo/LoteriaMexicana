@@ -156,7 +156,7 @@ function elegirTabla(tabla) {
     tablero1.addEventListener('click', (e) => {
             if(e.target.className == "cuadrito"){
                 if(!e.target.hasAttribute('disabled')){
-                    e.target.insertAdjacentHTML('beforeend', `<span class='ficha'><img src='/img/ficha.png'></span>`)
+                    e.target.insertAdjacentHTML('beforeend', `<span class='ficha'><img src='img/ficha.png'></span>`)
                     jugador1 += 1;
                     verificar()
                     e.target.setAttribute('disabled')
@@ -243,7 +243,7 @@ function cambiarFrase(numero){
 
 
 function seleccionar(casilla) {
-    casilla.insertAdjacentHTML('beforeend', `<span class='ficha'><img src='/img/ficha.png'></span>`)
+    casilla.insertAdjacentHTML('beforeend', `<span class='ficha'><img src='img/ficha.png'></span>`)
     cpu += 1
     verificar();
 }
